@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Underwell Pit — Sandbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Underwell Pit — Sandbox</h1>
+    <div class="subtitle">Fan-made sandbox — <span class="credit">inspired by the game <em>Sandship: The Last Engineer</em></span></div>
+  </header>
+
+  <main>
+    <aside class="toolbar" id="toolbar" aria-label="Tools">
+      <button class="tool active" data-tool="select">Select</button>
+      <button class="tool" data-tool="builder">Block</button>
+      <button class="tool" data-tool="welder">Welder</button>
+      <button class="tool" data-tool="laser">Laser Turret</button>
+      <button class="tool" data-tool="shock">Shock Trap</button>
+      <button class="tool" data-tool="bomb">Bomb</button>
+      <button class="tool" data-tool="barrier">Barrier</button>
+      <button class="tool" data-tool="conveyor">Conveyor</button>
+      <div class="spacer"></div>
+      <button class="tool" id="btnClear">Clear</button>
+    </aside>
+
+    <section class="pit-area">
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="resetBtn">Reset</button>
+        <div class="score">Time: <span id="time">0.0</span>s</div>
+        <div class="score">Everstone: <span id="everHp">100</span></div>
+        <div class="score">Highscore: <span id="high">0.0</span></div>
+      </div>
+
+      <canvas id="pitCanvas" touch-action="none"></canvas>
+
+      <div class="hud">Active tool: <span id="activeTool">Select</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>This sandbox is fan-made and <strong>inspired by the game <em>Sandship: The Last Engineer</em></strong>. No official affiliation. All assets here are original.</p>
+    <p>&copy; <span id="year"></span> Underwell Sandbox — MIT License</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
